@@ -1,0 +1,12 @@
+{
+  "name": "solace-crm-experiences",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build-vercel.mjs",
+    "vercel-build": "npm run build"
+  }
+}
