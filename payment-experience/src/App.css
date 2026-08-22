@@ -1,4 +1,4 @@
-:root { --ink: #173832; --pine: #0d4a40; --mint: #b9e5cc; --paper: #f7f6f0; --panel: #fffefa; --line: #dfe5dc; --muted: #6e7f76; --coral: #ed8067; --gold: #e9bb54; --sky: #bfdde2; }
+:root { --ink: #123b33; --pine: #0c5a4a; --mint: #bce8d0; --paper: #f3f5ef; --panel: #fffefa; --line: #d5e1d7; --muted: #697f75; --coral: #de765f; --gold: #d6a33c; --sky: #c5e0e3; }
 .shell { min-height: 100vh; background: var(--paper); color: var(--ink); }
 .sidebar { position: fixed; inset: 0 auto 0 0; z-index: 20; display: flex; flex-direction: column; width: 255px; padding: 24px 16px 18px; background: #123d36; color: #edf6ec; }
 .brand { display: flex; align-items: center; gap: 9px; padding: 0 8px 28px; font-size: 21px; font-weight: 700; letter-spacing: .02em; }.brand-mark { display: grid; width: 28px; height: 28px; place-items: center; border-radius: 9px; background: var(--mint); color: var(--pine); font-family: Georgia, serif; font-size: 21px; }

@@ -9,6 +9,7 @@ const outputDirectory = resolve(root, 'dist')
 const applications = [
   { name: 'call-experience', outputName: 'calls', basePath: '/calls/' },
   { name: 'payment-experience', outputName: 'payments', basePath: '/payments/' },
+  { name: 'form-experience', outputName: 'forms', basePath: '/forms/' },
 ]
 const publicNpmEnvironment = Object.fromEntries(
   Object.entries(process.env).filter(([name]) => !name.toUpperCase().startsWith('NPM_')),

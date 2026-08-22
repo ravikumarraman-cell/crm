@@ -17,6 +17,11 @@
       "source": "/payments",
       "destination": "/payments/",
       "permanent": false
+    },
+    {
+      "source": "/forms",
+      "destination": "/forms/",
+      "permanent": false
     }
   ]
 }
