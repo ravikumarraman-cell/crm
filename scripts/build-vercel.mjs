@@ -15,7 +15,10 @@ await mkdir(outputDirectory, { recursive: true })
 
 for (const application of applications) {
   const applicationDirectory = resolve(root, application.name)
-  execFileSync('npm', ['ci'], { cwd: applicationDirectory, stdio: 'inherit' })
+  execFileSync('npm', ['ci', '--registry=https://registry.npmjs.org/'], {
+    cwd: applicationDirectory,
+    stdio: 'inherit',
+  })
   execFileSync('npm', ['run', 'build'], {
     cwd: applicationDirectory,
     env: { ...process.env, VITE_BASE_PATH: application.basePath },
