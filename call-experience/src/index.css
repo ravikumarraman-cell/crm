@@ -1,2 +1,5 @@
 :root { font-family: Manrope, 'Segoe UI', sans-serif; color: #17342d; background: #f5f7f5; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 body { min-width: 320px; margin: 0; }
+.experience-guide-link { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 10px; border: 1px solid #d7e2d8; border-radius: 8px; color: #456c5e; background: rgba(255,255,255,.74); font-size: 11px; font-weight: 780; text-decoration: none; transition: .18s; }
+.experience-guide-link:hover { border-color: #a4c5ac; color: #0f6450; background: #e1f0e4; transform: translateY(-1px); }
+@media (max-width: 620px) { .experience-guide-link { width: 34px; padding: 0; justify-content: center; }.experience-guide-link span { display: none; } }

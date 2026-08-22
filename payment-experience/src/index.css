@@ -13,3 +13,7 @@ body { margin: 0; min-width: 320px; min-height: 100vh; }
 button, input, select { font: inherit; }
 
 button { cursor: pointer; }
+
+.experience-guide-link { display: inline-flex; align-items: center; gap: 6px; min-height: 37px; padding: 0 10px; border: 1px solid #d5e1d7; border-radius: 7px; background: #fffefa; color: #4d7163; font-size: 11px; font-weight: 800; text-decoration: none; transition: .18s; }
+.experience-guide-link:hover { border-color: #91bb9f; background: #edf6ee; color: #0c5a4a; transform: translateY(-1px); }
+@media (max-width: 720px) { .experience-guide-link { width: 37px; padding: 0; justify-content: center; }.experience-guide-link span { display: none; } }

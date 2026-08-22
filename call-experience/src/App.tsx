@@ -383,9 +383,9 @@ function App() {
           <div className="crumbs"><span>Calls</span><span className="slash">/</span><strong>My workspace</strong></div>
           <div className="topbar-actions">
             <button className="availability" onClick={() => setAvailability((current) => current === 'Available' ? 'Focus time' : 'Available')}><i className={availability === 'Focus time' ? 'focus-dot' : ''}></i>{availability} <ChevronDown size={14} /></button>
+            <a className="experience-guide-link" href="/calls/guide/" title="Open the Calls experience guide"><CircleHelp size={16} /><span>Experience guide</span></a>
             <button className="icon-button" onClick={() => setShowFinder(true)} aria-label="Open Call Finder"><Search size={18} /></button>
             <button className="icon-button notification" onClick={() => setToast('You have one follow-up due today.')} aria-label="Notifications"><Bell size={18} /><b></b></button>
-            <button className="icon-button" onClick={() => setToast('Tip: use Open record to see the full relationship story.')} aria-label="Help"><CircleHelp size={18} /></button>
           </div>
         </header>
 

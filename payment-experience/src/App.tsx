@@ -126,7 +126,7 @@ function App() {
         <header className="topbar">
           <button className="icon-button mobile-menu" aria-label="Open Payments navigation" onClick={() => setMobilePaymentsMenuOpen((open) => !open)}><Menu size={21} /></button>
           <div className="breadcrumb"><span>CRM</span><ChevronRight size={14} /><strong>{pageTitle}</strong></div>
-          <div className="header-actions"><button className="icon-button" aria-label="Notifications"><Bell size={19} /><span className="notification-dot" /></button><div className="avatar">NR</div></div>
+          <div className="header-actions"><a className="experience-guide-link" href="/payments/guide/" title="Open the Payments experience guide"><FileText size={16} /><span>Experience guide</span></a><button className="icon-button" aria-label="Notifications"><Bell size={19} /><span className="notification-dot" /></button><div className="avatar">NR</div></div>
         </header>
 
         <div className="page">

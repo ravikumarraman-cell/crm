@@ -187,7 +187,7 @@ function App() {
       <main className="workspace">
         <header className="topbar">
           <div className="crumbs"><span>CRM</span><span>/</span><strong>Forms</strong>{view !== 'overview' ? <><span>/</span><strong>{view === 'builder' ? formName : view}</strong></> : null}</div>
-          <div className="topbar-actions"><span className="live-status"><i />All systems healthy</span><button className="icon-button" aria-label="Search"><Search size={17} /></button><button className="icon-button notification" aria-label="Notifications"><Bell size={17} /><b /></button></div>
+          <div className="topbar-actions"><span className="live-status"><i />All systems healthy</span><a className="experience-guide-link" href={`${import.meta.env.BASE_URL}guide/`} title="Open the Forms experience guide"><BookOpen size={16} /><span>Experience guide</span></a><button className="icon-button" aria-label="Search"><Search size={17} /></button><button className="icon-button notification" aria-label="Notifications"><Bell size={17} /><b /></button></div>
         </header>
 
         {view === 'overview' && <Overview activeForms={activeForms} attentionCount={attentionCount} onReview={() => navigate('submissions')} onBuild={() => navigate('builder')} onOpenAnalytics={() => navigate('analytics')} />}
