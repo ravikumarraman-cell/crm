@@ -24,6 +24,7 @@ import {
   Users,
   X,
 } from 'lucide-react'
+import { Analytics } from '@vercel/analytics/react'
 
 type View = 'overview' | 'collect' | 'transactions' | 'recurring' | 'donors' | 'reconciliation' | 'settings'
 type Frequency = 'One time' | 'Monthly' | 'Quarterly' | 'Annually'
@@ -144,6 +145,7 @@ function App() {
       {collectionMode && <CollectionComposer mode={collectionMode} onClose={() => setCollectionMode(null)} notify={setToast} />}
       {workflow && <WorkflowSheet workflow={workflow} onClose={() => setWorkflow(null)} notify={setToast} />}
       {toast && <div className="toast"><Check size={16} />{toast}<button aria-label="Dismiss message" onClick={() => setToast('')}><X size={15} /></button></div>}
+      <Analytics />
     </main>
   )
 }
