@@ -5,6 +5,7 @@ import {
   MoreHorizontal, Pause, Phone, PhoneCall, PhoneOff, Play, Plus, Search,
   Settings2, ShieldCheck, SlidersHorizontal, Sparkles, UsersRound, VolumeX,
 } from 'lucide-react'
+import { Analytics } from '@vercel/analytics/react'
 import './App.css'
 
 type CallStatus = 'ready' | 'incoming' | 'calling' | 'connected' | 'wrap-up'
@@ -547,6 +548,7 @@ function App() {
       </section>
       {showFinder && <div className="composer-backdrop finder-backdrop" role="presentation" onMouseDown={() => setShowFinder(false)}><section className="call-finder" role="dialog" aria-modal="true" aria-labelledby="finder-title" onMouseDown={(event) => event.stopPropagation()}><div className="finder-heading"><div><p className="eyebrow">CALL FINDER</p><h2 id="finder-title">What do you need to move?</h2></div><button className="icon-button" onClick={() => setShowFinder(false)} aria-label="Close Call Finder">×</button></div><label className="finder-input"><Search size={18} /><input value={finderQuery} onChange={(event) => setFinderQuery(event.target.value)} placeholder="Try “voicemail”, “no answer”, or a contact name" autoFocus /></label><div className="finder-results">{finderResults.length ? finderResults.map((intent) => <button className="finder-result" key={intent.label} onClick={() => openFinderIntent(intent.filter)}><span className="finder-result-icon">{intent.filter === 'Voicemails' ? <PhoneOff size={16} /> : intent.filter === 'Uncontacted' ? <UsersRound size={16} /> : intent.filter === 'Softphone' ? <Headphones size={16} /> : <PhoneCall size={16} />}</span><span><strong>{intent.label}</strong><small>{intent.detail}</small></span><span>Open</span></button>) : <div className="finder-empty"><Sparkles size={19} /><strong>No matching call view</strong><span>Try voicemail, softphone, no answer, or follow-up.</span></div>}</div><p className="finder-footnote">Every view is powered by the same canonical call activity, so a filter never loses relationship context.</p></section></div>}
       {toast && <div className="toast" role="status"><Check size={16} /><span>{toast}</span><button onClick={() => setToast('')} aria-label="Dismiss notification">×</button></div>}
+      <Analytics />
     </main>
   )
 }

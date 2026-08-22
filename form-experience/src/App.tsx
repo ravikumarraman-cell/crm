@@ -6,6 +6,7 @@ import {
   Mail, MoreHorizontal, Plus, Radar, RefreshCw, Search, Send, Settings2,
   ShieldCheck, SlidersHorizontal, Sparkles, UserCheck, UsersRound, X,
 } from 'lucide-react'
+import { Analytics } from '@vercel/analytics/react'
 import './App.css'
 
 type View = 'overview' | 'forms' | 'builder' | 'submissions' | 'analytics' | 'automations' | 'library' | 'settings'
@@ -209,6 +210,7 @@ function App() {
 
       {showNewForm && <div className="modal-backdrop"><section className="new-form-modal" role="dialog" aria-modal="true" aria-label="Create form"><button className="close-button" onClick={() => setShowNewForm(false)} aria-label="Close"><X size={18} /></button><span className="eyebrow">NEW CRM INTAKE</span><h2>Start with the relationship outcome.</h2><p>Solace will guide the fields, consent, routing, and follow-through from that decision.</p><div className="template-options"><button onClick={createForm}><span><UserCheck size={18} /></span><strong>Request a demo</strong><small>Qualify and route a sales conversation.</small></button><button onClick={createForm}><span><CircleAlert size={18} /></span><strong>Support request</strong><small>Give a customer one accountable service path.</small></button><button onClick={createForm}><span><CalendarClock size={18} /></span><strong>Event registration</strong><small>Capture attendance with context and consent.</small></button></div><button className="quiet-button" onClick={createForm}>Start blank instead <ArrowRight size={14} /></button></section></div>}
       {toast ? <div className="toast"><CheckCircle2 size={17} />{toast}</div> : null}
+      <Analytics />
     </div>
   )
 }
